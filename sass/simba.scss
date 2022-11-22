@@ -1,0 +1,198 @@
+
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+.oh{
+	overflow: hidden;
+}
+
+.mh40{
+	min-height: 40rpx;
+}
+
+.w100{
+	width: 100%;
+}
+.h100{
+	height: 100%;
+}
+.c-m{
+	color:$main-color;
+}
+
+.c-d{
+	color:$sub-color;
+}
+
+.page-body{
+	/*#ifdef MP-WEIXIN*/
+	height:100vh;
+	/*#endif*/
+	/*#ifdef H5*/
+	height:calc(100vh - 44px);
+	/*#endif*/
+	
+	/* #ifdef APP-VUE */
+	height:100vh;
+	/* #endif */
+}
+
+.bz{
+	box-sizing: border-box;
+}
+
+.page-body-tab{
+	/*#ifdef APP-PLUS*/
+	height:100vh;
+	/*#endif*/
+	height:calc(100vh - 60px);
+}	
+
+// 文字相关
+.bold{
+	font-weight: bold;
+}
+.t-c {
+  text-align: center;
+}
+.underline {
+  text-decoration: underline;
+}
+.del {
+  text-decoration: line-through;
+}
+
+// 盒子相关
+.shadow-line{
+	box-shadow: 0 0 5rpx #ccc;
+}
+
+.bg-white{
+	background: #fff !important;
+}
+
+.bg-grey{
+	background: rgba(244, 248, 249, 1) !important;
+}
+
+// 定位相关
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed{
+	position:fixed
+}
+
+// flex相关
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.j-c {
+  justify-content: center;
+}
+
+.j-s {
+  justify-content: space-between;
+}
+
+.j-s-c {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.j-a-c {
+  align-items: center;
+  justify-content: center;
+}
+
+.a-c {
+  align-items: center;
+}
+
+.a-b{
+	align-items: baseline;
+}
+
+.a-s {
+  align-content: space-between;
+}
+
+.a-e {
+  align-items: flex-end;
+}
+
+.j-start{
+	justify-content: flex-start;
+}
+
+.j-end{
+	justify-content: flex-end;
+}
+
+// 生成从3到10的圆角备用，使用时直接radius3/radius4啥的即可
+@for $i from 6 through 20 {
+  .radius#{$i} {
+    border-radius: #{$i}rpx;
+	overflow: hidden;
+  }
+}
+
+// 生成常用的字体备用，使用时直接pad5/pad10啥的即可
+@for $i from 24 through 64 {
+  .font#{$i} {
+    font-size: #{$i}rpx;
+  }
+}
+
+// 生成常用的边距备用，使用时直接pad5/pad10啥的即可
+@for $i from 10 through 50 {
+  .padv#{$i} {
+    padding-top: #{$i}rpx;
+    padding-bottom: #{$i}rpx;
+  }
+
+  .padh#{$i} {
+    padding-left: #{$i}rpx;
+    padding-right: #{$i}rpx;
+  }
+
+  .pad#{$i} {
+    padding: #{$i}rpx;
+  }
+
+  .marv#{$i} {
+    margin-top: #{$i}rpx;
+    margin-bottom: #{$i}rpx;
+  }
+
+  .marh#{$i} {
+    margin-left: #{$i}rpx;
+    margin-right: #{$i}rpx;
+  }
+
+  .mar#{$i} {
+    margin: #{$i}rpx;
+  }
+}
